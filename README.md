@@ -1,11 +1,18 @@
 # Adj.Close_Stock_Grapher
 
-Adjusted close grapher, making a line graph of the stock and time period selected, and then exporting the file as a portable HTML file (named stockname.html). The graph includes a Hover Tool showing date and adj.close, making it easy to check the info. I included an HTML showing how the graph output looks like.
+Adjusted close grapher, making a line graph of the stock and time period selected. There are 3 core iterations of the same concept;
+
+Version 1 (Adj.Close_Line_Graph):
+* Can only handle one stock at a time. I couldn't think of a good way to create dynamically assigned colors to however many stocks would be queued up, and decided to only give it one-stock functionality.
+
+Version 2 (Adj.Close_Line_Graph_Multi):
+* Can handle an expandable multitude of stocks, separated by commas. This is the main thing I wanted to update from Version 1, since comparing multiple stocks is incredibly useful. I figured out how to use a color generator to assign colors dynamically, and the legend also works well. This has the full "core" functionality.
+
+Version 3 (FlaskAdj.Close):
+* Contains a Flask web app GUI. This was my first foray into creating Flask interfaces (I previously used TKinter but I wanted something a bit more modern). It uses Flask-wtforms for input validation. 
 
 The code features the following:
 * Pandas Datareader, used to source stock data from Yahoo Finance for the stock and date period selected.
-* Bokeh, used to graph the stock data from Yahoo Finance
-
-Room for growth:
-* Multiple stock input. Easily the most useful addition I can think of, and using a for loop to graph a line for each stock in the list would not be tricky. The tricky part is making the ColumnDataSource to be flexible enough to accept whatever the list of stocks is (ie. if user adds 5 stocks, the ColumnDataSource should automatically pull the info for the 5 stocks from the df that PandasDatareader generates, so that the for loop making the lines can easily pull info from there).There's definitely some sort of workaround there, just need to research it more.
-* GUI? Making a TKinter GUI (or even a Flask interface) wouldn't be too bad of an idea, but the app is already so easy to use that I'm not sure if it would be worth it.
+* Bokeh, used to graph the stock data from Yahoo Finance.
+* Flask, used to create an easy-to-use interface.
+* Flask-wtforms, used to create forms and basic input validation.
