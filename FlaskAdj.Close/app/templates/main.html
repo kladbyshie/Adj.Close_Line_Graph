@@ -1,0 +1,27 @@
+{%extends "heading.html"%}
+{%block content%}
+<script type="text/javascript" src = {{cdn_js | safe}}></script>
+<body>
+    {% if message %}
+    <p class="message">{{ message | safe }}</p>
+    {% endif %}
+    <div class="formwrapper">
+        <form method="POST" action="{{ url_for('main')}}">
+            {{form.csrf_token}}
+            <div class = "form_label">{{form.startdate.label}}</div>
+            <div class = "formfield">{{form.startdate}}</div>
+            <div class = "form_label">{{form.enddate.label}} </div>
+            <div class = "formfield">{{form.enddate}}</div>
+            <div class = "form_label">{{form.stocklist.label}}</div>
+            <div class = "stockfield">{{form.stocklist}}</div>
+            <div class = "button">{{form.submit}}</div>
+        </form>
+    </div>
+    {% if script %}
+    <div class="graph">
+        {{script | safe}}
+        {{div1 | safe}}
+    </div>
+    {% endif %}
+</body>
+{%endblock%}
