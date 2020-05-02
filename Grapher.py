@@ -21,7 +21,8 @@ def grapher(stocks, startdate, enddate):
     fig.update_layout(hovermode='x unified', 
                       title = f'Adjusted Close Graph between {startdate} and {enddate}',
                       xaxis_title='Date',
-                      yaxis_title='Adjusted Close')
+                      yaxis_title='Adjusted Close',
+                      showlegend=True)
 
     fig.update_yaxes(tickprefix="$")
 
