@@ -1,5 +1,5 @@
 # Adj.Close_Stock_Grapher
-
+Currently hosted on https://adjcloseapp.herokuapp.com/
 Adjusted close grapher, making a line graph of the stock and time period selected. There are 4 core iterations of the same concept;
 
 CURRENT: Version 4, master branch:
