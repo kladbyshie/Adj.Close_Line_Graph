@@ -1,6 +1,5 @@
 {%extends "heading.html"%}
 {%block content%}
-<script type="text/javascript" src = {{cdn_js | safe}}></script>
 <body>
     {% if message %}
     <p class="message">{{ message | safe }}</p>
@@ -17,10 +16,9 @@
             <div class = "button">{{form.submit}}</div>
         </form>
     </div>
-    {% if script %}
+    {% if htmlcode %}
     <div class="graph">
-        {{script | safe}}
-        {{div1 | safe}}
+        {{htmlcode | safe}}
     </div>
     {% endif %}
 </body>
