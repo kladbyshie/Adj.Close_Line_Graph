@@ -19,4 +19,4 @@ pandas_datareader == 0.8.1
 plotly == 4.6.0
 
 # C:\Users\ngara\Desktop\Jupyter-Notebook-Files\Completed projects\Adj.Close_Line_Graph\routes.py: 8
-waitress == 1.4.3
+waitress == 2.1.1
